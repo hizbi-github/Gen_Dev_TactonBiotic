@@ -74,7 +74,7 @@ const backendServer = httpServer.createServer(function(req, res)
   }
   
   
-  if (req.url == "client.js")
+  if (req.url == "backend.js")
   {
     res.writeHead(200, {"Content-Type": "text/javascript"})
     
