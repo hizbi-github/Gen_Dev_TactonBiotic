@@ -1,0 +1,84 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remote-Control@TactonBiotic</title>
+    <link href="frontend.css" rel="stylesheet">
+</head>
+<body>
+    <h1 class="main-heading">TactonBiotic Remote Control Center</h1>
+
+    <! Flex for the Client Switching Buttons >
+    <div class="client-switch-buttons-flex">
+
+        <button class="button butSwitchClient" id="butSwitchClient">Switch Robot!</button>
+
+    </div>
+
+    <! Flex for the Client Information >
+    <div class="client-info-flex">
+
+        <h3 class="client-info">Client Name: <span id="clientName"></span></h3>
+        <h3 class="client-info">Client IP Address: <span id="clientIPAddress"></span></h3>
+        <h3 class="client-info">Client Location: <span id="clientLocation"></span></h3>
+        <h3 class="client-info">Client Latency: <span id="clientLatency"></span></h3>
+
+    </div>
+
+    <! Flex for the Throttle Buttons >
+    <div class="throttle-buttons-flex">
+
+        <button class="button butDecreaseTrt" id="butDecreaseTrt">Decrease Throttle</button>
+
+        <button class="button butIncreaseTrt" id="butIncreaseTrt">Increase Throttle</button>
+
+    </div>
+    
+    <! Flex for the Front Buttons >
+    <div class="common-buttons-flex">  
+        
+        <! Grid for the D-Pad Buttons >
+        <div class="d-pad-buttons-grid">
+
+            <button class="button butTrans"></button>
+            <button class="button butDPad" id="butDPad_Up">&#8593</button>
+            <button class="button butTrans"></button>
+            <button class="button butDPad" id="butDPad_Left">&#8592</button>
+            <button class="button butTrans"></button>
+            <button class="button butDPad" id="butDPad_Right">&#8594</button>
+            <button class="button butTrans"></button>
+            <button class="button butDPad" id="butDPad_Down">&#8595</button>
+            <button class="button butTrans"></button>
+
+        </div>
+        
+        <! Grid for the Face Buttons >
+        <div class="face-buttons-grid">
+
+            <button class="button butTrans"></button>
+            <button class="button butFrontFace" id="butFrontFace_Triangle">&#9651</button>
+            <button class="button butTrans"></button>
+            <button class="button butFrontFace" id="butFrontFace_Square">&#9634</button>
+            <button class="button butTrans"></button>
+            <button class="button butFrontFace" id="butFrontFace_Circle">&#9711</button>
+            <button class="button butTrans"></button>
+            <button class="button butFrontFace" id="butFrontFace_Axe">X</button>
+            <button class="button butTrans"></button>
+
+        </div>
+
+    </div>
+
+    <! Google FireBase Libraries for JavaScript >    
+            
+    <! JavaScript addon for the backend logic >
+    <script src="./dist/backend.js"></script>
+
+</body>
+</html>
+

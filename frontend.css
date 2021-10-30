@@ -1,0 +1,210 @@
+
+
+
+/**, *::before, *::after
+{
+    box-sizing: border-box;
+}*/
+
+
+body
+{
+    padding: 0;
+    margin: 0;
+    
+    background: linear-gradient(to right, #153748, #53393f);
+}
+
+
+.main-heading
+{
+    text-align: center;
+
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 2.5rem;
+    
+}
+
+
+/* Flex for the Client Switching Buttons */
+.client-switch-buttons-flex
+{
+    display: flex;
+
+    justify-content: center;
+
+    margin: 1%;
+}
+
+
+.butSwitchClient
+{
+    width: 200px;
+    height: 50px;
+
+    font-weight: 900;
+
+    /*padding: 10px;*/
+}
+
+
+/* Flex for the Client Information */
+.client-info-flex
+{
+    display: flex;
+    flex-direction: column;
+
+    margin-bottom: 100px;
+}
+
+
+.client-info
+{
+    text-align: center;
+
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 1.3rem;
+    font-weight: 700;
+
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Flex for the Throttle Buttons */
+.throttle-buttons-flex
+{
+    display: flex;
+
+    justify-content: space-evenly;
+
+    /*grid-template-columns: 1fr 1fr;*/
+
+    gap: 25%;
+
+    margin: 2%;
+    /*padding: 5%;*/
+}
+
+
+.butDecreaseTrt
+{
+    width: 100px;
+    height: 50px;
+
+    font-weight: 900;
+
+    /*padding: 10px;*/
+}
+
+
+.butIncreaseTrt 
+{
+    width: 100px;
+    height: 50px;
+
+    font-weight: 900;
+
+    /*padding: 10px;*/
+}
+
+
+/* Flex for the Front Buttons */
+.common-buttons-flex
+{
+    display: flex;
+
+    justify-content: space-evenly;
+
+    gap: 25%;
+
+    margin: 2%;
+}
+
+
+/* Grid for the D-Pad Buttons */
+.d-pad-buttons-grid
+{
+    display: grid;
+
+    justify-content: space-evenly;
+
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+
+    /*gap: 25%;*/
+
+    margin: 2%;
+}
+
+
+/* Grid for the Face Buttons */
+.face-buttons-grid
+{
+    display: grid;
+
+    justify-content: space-evenly;
+
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+
+    /*gap: 25%;*/
+
+    margin: 2%;
+}
+
+
+.butDPad 
+{
+    width: 50px;
+    height: 50px;
+    border: 1px solid white;
+
+    cursor: pointer;
+
+    font-size: 2.5rem;
+    font-weight: 900;
+
+    background-color: rgba(255, 255, 255, .75);
+}
+
+
+.butFrontFace
+{
+    width: 50px;
+    height: 50px;
+    border: 1px solid white;
+
+    cursor: pointer;
+
+    font-size: 1.3rem;
+    font-weight: 900;
+
+    background-color: rgba(255, 255, 255, .75);
+}
+
+
+.butTrans
+{
+    background-color: transparent;
+    
+    width: 50px;
+    height: 50px;
+
+    border: none;
+    overflow: hidden;
+    background-repeat:no-repeat;
+    outline:none;
+
+    font-size: 1rem;
+}
+
+
+.button
+{
+    font-family:'Courier New', Courier, monospace;
+
+    outline: none;
+}
+
+
