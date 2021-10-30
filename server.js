@@ -13,9 +13,9 @@ const urlHandler = require("url");
 
 // const postDataHandler = require("body-parser")
 
-//const port = process.env.PORT;
+const port = process.env.PORT;
 
-const port = 3000;
+// const port = 3000;
 
 
 
@@ -56,31 +56,31 @@ const backendServer = httpServer.createServer(function(req, res)
   {
     res.writeHead(200, {"Content-Type": "text/html"})
     
-    fileHandler.createReadStream("src/pages/index.html").pipe(res);
+    fileHandler.createReadStream("index.html").pipe(res);
     
     res.end;
   }
   
   
-  if (req.url == "/public/frontend.css")
+  if (req.url == "frontend.css")
   {
     res.writeHead(200, {"Content-Type": "text/css"})
     
     // console.log("Before FileHandler!");
     
-    fileHandler.createReadStream("public/frontend.css").pipe(res);
+    fileHandler.createReadStream("frontend.css").pipe(res);
     
     res.end;
   }
   
   
-  if (req.url == "/client.js")
+  if (req.url == "client.js")
   {
     res.writeHead(200, {"Content-Type": "text/javascript"})
     
     // console.log("Before FileHandler!");
     
-    fileHandler.createReadStream("./client.js").pipe(res);
+    fileHandler.createReadStream("backend.js").pipe(res);
     
     res.end;
   }
