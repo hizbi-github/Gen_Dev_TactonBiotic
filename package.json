@@ -10,7 +10,7 @@
   },
   "scripts": 
   {
-    "start": "node ./server.js"
+    "start": "node server.js"
   },
   "author": "Hizbi-K",
   "license": "MIT"
