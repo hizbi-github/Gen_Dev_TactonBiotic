@@ -13,7 +13,7 @@ const urlHandler = require("url");
 
 // const postDataHandler = require("body-parser")
 
-const port = process.env.PORT;
+const port = process.env.PORT || 80;
 
 // const port = 3000;
 
@@ -56,7 +56,7 @@ const backendServer = httpServer.createServer(function(req, res)
   {
     res.writeHead(200, {"Content-Type": "text/html"})
     
-    fileHandler.createReadStream("index.html").pipe(res);
+    fileHandler.createReadStream("./index.html").pipe(res);
     
     res.end;
   }
@@ -68,7 +68,7 @@ const backendServer = httpServer.createServer(function(req, res)
     
     // console.log("Before FileHandler!");
     
-    fileHandler.createReadStream("frontend.css").pipe(res);
+    fileHandler.createReadStream("./frontend.css").pipe(res);
     
     res.end;
   }
@@ -80,7 +80,7 @@ const backendServer = httpServer.createServer(function(req, res)
     
     // console.log("Before FileHandler!");
     
-    fileHandler.createReadStream("backend.js").pipe(res);
+    fileHandler.createReadStream("./backend.js").pipe(res);
     
     res.end;
   }
