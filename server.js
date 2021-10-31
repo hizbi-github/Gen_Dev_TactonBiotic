@@ -109,7 +109,7 @@ const backendServer = httpServer.createServer(function(req, res)
 })
 
 
-const realTimeComs = new realTimeServer.Server({ server: backendServer });
+const realTimeComs = new realTimeServer.Server({ server: backendServer, perMessageDeflate :false });
 
 
 realTimeComs.on("connection", function connection(coms, client) 
