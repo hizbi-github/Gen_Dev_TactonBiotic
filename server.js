@@ -13,7 +13,7 @@ const urlHandler = require("url");
 
 // const postDataHandler = require("body-parser")
 
-const port = process.env.PORT || 80;
+const port = process.env.PORT || 8080 || process.env.WEBSITE_PORT;
 
 // const port = 3000;
 
