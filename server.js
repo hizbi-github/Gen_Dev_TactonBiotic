@@ -15,8 +15,6 @@ const urlHandler = require("url");
 
 const port = process.env.PORT || 8080 || process.env.WEBSITE_PORT;
 
-// const port = 3000;
-
 
 
 let remoteClients = {};
@@ -56,7 +54,9 @@ const backendServer = httpServer.createServer(function(req, res)
   {
     res.writeHead(200, {"Content-Type": "text/html"})
     
-    fileHandler.createReadStream("./index.html").pipe(res);
+    console.log("Before HTML FileHandler!");
+    
+    fileHandler.createReadStream("wwwroot/index.html").pipe(res);
     
     res.end;
   }
@@ -66,9 +66,9 @@ const backendServer = httpServer.createServer(function(req, res)
   {
     res.writeHead(200, {"Content-Type": "text/css"})
     
-    // console.log("Before FileHandler!");
+    console.log("Before CSS FileHandler!");
     
-    fileHandler.createReadStream("./frontend.css").pipe(res);
+    fileHandler.createReadStream("wwwroot/frontend.css").pipe(res);
     
     res.end;
   }
@@ -78,9 +78,9 @@ const backendServer = httpServer.createServer(function(req, res)
   {
     res.writeHead(200, {"Content-Type": "text/javascript"})
     
-    // console.log("Before FileHandler!");
+    console.log("Before JavaScript FileHandler!");
     
-    fileHandler.createReadStream("./backend.js").pipe(res);
+    fileHandler.createReadStream("wwwroot/backend.js").pipe(res);
     
     res.end;
   }
@@ -159,55 +159,9 @@ backendServer.listen(port, function(error)
   }
   else
   {
-    console.log("Server is listening on universal port: " + port);
+    console.log("Server by Hizbi is listening on universal port: " + port);
   }
 });
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-////import * as  express from 'express';
-////import * as https from 'https';
-////import * as socketIo from 'socket.io';
-
-
-//let express = require('express');
-//let http = require('http');
-//let socketIo = require('socket.io');
-
-
-//let webApp = express();
-
-//webApp.get('/', (req, res) => res.send("Hello TactonBiotic"));
-
-//let webAppServer = http.Server(webApp);
-
-
-
-//webAppServer.listen(3000);
-
-
-
-//let socketIo_Instance = socketIo(webAppServer);
-
-//socketIo_Instance.on('connection', (socket) =>
-//{
-
-//  socket.emit('hello', 
-//  {
-
-//    greeting: 'Hello again!'
-
-//  });
-
-//});
